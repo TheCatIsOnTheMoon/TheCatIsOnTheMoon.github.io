@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="form.css" />
+    <title>Formulaire</title>
+</head>
+
+<body>
+
+    <header>
+
+    <h1>Questionnaire d'importance capitale</h1>
+
+    <p class="att">WARNING</p>
+
+    <p>Je n'ai pas encore appris comment récupérer les données avec PHP donc pour l'instant ce formulaire est juste décoratif.
+        <br />
+        Les infos que vous tapez ne sont ni enregistrées ni récupérées.
+        </p>
+        <p>Elles sont perdues à tout jamais ! Désolé !</p>
+
+    </header>
+
+    <!--du coup la page traitement.php pour enregistrer les données n'existe pas hein-->
+    <form method="post" action="traitement.php">
+
+        <!--NOTES
+
+placer automatiquement le curseur dans l'un des champs de votre formulaire : attribut autofocus
+Dès que le visiteur chargera la page, le curseur se placera dans ce champ.
+
+faire en sorte qu'un champ soit obligatoire : attribut required  .
+
+CSS : pour changer le style des éléments requis ( :required  ) et invalides ( :invalid  ).
+:focus  pour changer l'apparence d'un champ lorsque le curseur se trouve à l'intérieur.
+-->
+
+
+        <fieldset>
+            <legend>A votre propos</legend>
+            <!--titre du fieldset-->
+            <!-- INFOS
+        name="" permet de reconnaitre l'information recup dans le php par ex, c'est une variable du formulaire
+        id="" identifie l'élément html, il est unique
+        for="" lie le label au champ par l'id
+        placeholder="" indique le contenu
+        size="" taille du champ (en nombre de caractères)
+        maxlength="" maximum de caractères dans le champs
+        value="" pour préremplir le champs
+        -->
+            <label for="pseudo">Qui êtes vous :</label>
+            <input type="text" name="pseudo" id="pseudo" placeholder="exemple : matière fécale" size="30" maxlength="20" required autofocus />
+
+            <br />
+
+            <!--date  : pour la date (05/08/1985 par exemple) ;
+        time  : pour l'heure (13:37 par exemple) ;
+        week  : pour la semaine ;
+        month  : pour le mois ;
+        datetime  : pour la date et l'heure (avec gestion du décalage horaire) ;
+        datetime-local  pour la date et l'heure (sans gestion du décalage horaire).
+
+        ATT : Surveillez bien quels navigateurs gèrent ce type de champ, il n'est pas encore complètement reconnu.
+        -->
+            <label for="date">Quel est la date du jour:</label>
+            <input type="date" name="date" id="date" required />
+
+            <br />
+
+            <label for="heure">Quelle heure est-il à ce moment précis:</label>
+            <input type="time" name="heure" id="heure" required />
+
+            <br />
+
+            <label for="password">Créer le mot de passe de vos rêves:</label>
+            <input type="password" name="password" id="password" required />
+
+            <br />
+
+            <label for="mail">Créer l'adresse email de vos rêves:</label>
+            <input type="email" name="mail" id="mail" required />
+
+            <br />
+
+            <label for="phone">Créer le numéro de téléphone de vos rêves:</label>
+            <input type="tel" name="phone" id="phone" required />
+
+            <br />
+
+            <label for="site">Quel est votre site préféré ?</label>
+            <input type="url" name="site" id="site" required />
+
+            <br />
+
+            <!--les champs de type number et range peuvent être personnalisés avec :
+        min, max et step-->
+            <label for="nombre">Quel est votre chiffre ou nombre préféré ?</label>
+            <input type="number" name="nombre" id="nombre" required />
+
+            <br />
+
+            <label for="couleur">Quel est votre couleur préférée ?</label>
+            <input type="color" name="couleur" id="couleur" required />
+
+            <br />
+
+            <!-- bien mettre le meme "name" ici pour chaque afin de déterminer le "groupe"
+
+        cette fois on a choisi un id  différent de name  .
+        les valeurs de name  étant identiques, on n'aurait pas pu différencier les id
+        (et vous savez bien qu'un id  doit être unique !).
+        Voilà donc pourquoi on a choisi de donner à l' id  la même valeur que value  .
+
+        pour deux zones d'options différentes, il faut donner un name  unique à chaque groupe
+
+        on peut utiliser checked pour sélectionner une valeur pas défaut
+        -->
+            <p>Si vous devez emporter qu'un seul objet sur une île déserte :
+                <br />
+                (vous pouvez en choisir qu'un seul !)
+            </p>
+
+            <input type="radio" name="objet" value="chat" id="chat" /> <label for="chat">Un chat</label><br />
+            <input type="radio" name="objet" value="parfum" id="parfum" /> <label for="parfum">Du parfum</label><br />
+            <input type="radio" name="objet" value="montre" id="montre" /> <label for="montre">Une montre conectée</label><br />
+            <input type="radio" name="objet" value="capital" id="capital" /> <label for="capital">Le Capital de Karl Marx</label><br />
+            <input type="radio" name="objet" value="diplome" id="diplome" /> <label for="diplome">Votre diplôme de l'académie Jedi</label><br />
+            <input type="radio" name="objet" value="rape" id="rape" /> <label for="rape">Une rape à fromage</label><br />
+            <input type="radio" name="objet" value="clef" id="clef" /> <label for="clef">Les clefs de la batmobile</label><br />
+            <input type="radio" name="objet" value="bip" id="bip" /> <label for="bip">****** (vous savez de quoi je parle, faites pas l'innocent)</label><br />
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Me connaissez-vous ?</legend>
+            <!--
+        pour que une case soit cochée par défaut, attribut checked  :
+        <input type="checkbox" name="choix" checked />
+        -->
+            <p>Selon vous, quel est mon ou mes plus grands talents ?</p>
+            <input type="checkbox" name="nez" id="nez" /> <label for="nez">Pouvoir toucher mon nez avec ma langue.</label>
+            <br />
+            <input type="checkbox" name="poignets" id="poignets" /> <label for="poignets">Pouvoir déboiter mes poignets à volonté.</label>
+            <br />
+            <input type="checkbox" name="autretalent" id="autretalent" /> <label for="autretalent">Autre</label>
+            <br />
+            <label for="autre">Si vous avez choisi autre, dites-moi à quoi vous pensez qui vous semble plus génial que les deux précédents :</label>
+            <br />
+            <textarea name="autre" id="autre" rows="2" cols="50">
+        Ne soyez pas timide.
+        </textarea>
+
+            <p>
+                <label for="note">Si vous deviez me juger sur ma capcité à apréhender le parralélisme historique de la confusion sémentique des genres, à travers la fonction anti-constitutionelle du débordement des relations complexes des
+                    juxtapositions existantielles, vous me donneriez quelle note, approximative, entre 0 et 100 ?</label>
+                <br />
+                0
+                <input type="range" name="note" id="note" min="0" max="100" step="5" />
+                100
+            </p>
+
+            <label for="mcflurry">Si je prends un glaçe au mcdo, je prends presque toujours celle aux M&Ms alors que je préfère celle au Daims. Pourquoi ?</label>
+            <br />
+            <!--on utilise textarea au lieu de input pour une zone de texte multiligne
+        2 techniques pour déterminer la taille :
+        - on y ajoute width et height en CSS
+        - attributs rows et cols à la balise textarea -->
+            <textarea name="mcflurry" id="mcflurry" rows="10" cols="50">
+        La réponse à cette question est le plus grand secret de l'univers.
+        </textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>La fin est proche</legend>
+            <!-- pour que une option soit sélectionnée par défaut : attribut selected  :
+        <option value="canada" selected>Canada</option>
+        on peut grouper les options avec la balise <optgroup> </optgroup>
+        par exemple dans la leçon, pour ne pas séparer les pays en fonction de leur continent
+        -->
+            <label for="avis">Vous avez trouvé ce questionnaire :</label><br />
+            <select name="avis" id="avis">
+                <option value="palpitant">Palpitant</option>
+                <option value="intriguant">Intriguant</option>
+                <option value="effrayant">Effrayant</option>
+                <option value="revelateur">Révélateur</option>
+            </select>
+        </fieldset>
+
+        <!--type="submit"  : le principal bouton d'envoi de formulaire.
+        le + fréquent. Le visiteur sera conduit à la page indiquée dans l'attribut action  du formulaire ;
+        type="reset"  : remise à zéro du formulaire ;
+        type="image"  : comme type="submit" mais sous forme d'image. Rajoutez l'attribut src.
+
+
+-->
+        <p class="envoyer">
+            <input type="submit" value="Envoyer les réponses à Sam" />
+            <br />
+            Là, le boutton envoyer ne sert à rien vu que j'ai pas la page en PHP pour récup les données, mais bientôt ...
+        </p>
+
+
+    </form>
+
+    <footer>
+
+    <p class="merci">MERCI !</p>
+
+    </footer>
+
+</body>
+
+</html>
