@@ -1,0 +1,140 @@
+/*fonts--------------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'roboto_condensedlight';
+    src: url('font/RobotoCondensed-Light-webfont.eot');
+    src: url('font/RobotoCondensed-Light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('font/RobotoCondensed-Light-webfont.woff2') format('woff2'),
+        url('font/RobotoCondensed-Light-webfont.woff') format('woff'),
+        url('font/RobotoCondensed-Light-webfont.ttf') format('truetype'),
+        url('font/RobotoCondensed-Light-webfont.svg#roboto_condensedlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "roboto_condensedlight", verdana, sans-serif;
+    background-color: #d8d5c4;
+    margin: 1px;
+    border: double #c05e51;
+    font-weight: bold;
+    font-size: small;
+}
+
+aside {
+    background-color:#5a6e5a;
+    color: #d8d5c4;
+    line-height: 150%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    flex-shrink: 2;
+    padding: 2% 2% 2% 2%;
+}
+
+.photocv{
+    border : solid #f5c265;
+    margin-left: auto;
+    margin-right: auto;
+    width: 143px;
+}
+
+.competences {
+
+}
+
+.pdf{
+    border: solid #c05e51;
+    margin: auto;
+}
+
+.separation {
+    background-color: #c05e51;
+    width: 25px;
+    min-width: 25px;
+}
+
+header{
+    text-align: right;
+    padding-right: 2%;
+}
+
+section {
+    display: flex;
+}
+
+article{
+    flex-grow: 5;
+}
+
+ul {
+    text-align: justify;
+    padding-right: 2%;
+}
+
+li {
+    list-style-image: url(img/puce.png);
+    line-height: 150%;
+    margin-bottom: 5px;
+}
+
+h1{
+    font-size: 3em;
+    font-style: italic;
+    color: #c05e51;
+    text-align: right;
+}
+
+h2{
+    background-color: #5a6e5a;
+    color: #f5c265;
+    text-align: right;
+    padding-right: 30px;
+}
+
+aside h3 {
+    font-size: x-large;
+    font-style: italic;
+    text-align: center;
+    color : #c05e51
+}
+
+aside h4 {
+    font-size: large;
+    font-style: italic;
+    text-align: center;
+    color : #f5c265
+}
+
+h3, h4{
+    font-style: italic;
+    color: #5a6e5a;
+    padding-left: 2%;
+}
+
+a{
+    color: #5a6e5a;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #c05e51;
+}
+
+a:visited {
+    color: #5a6e5a;
+    text-decoration: none;
+}
+
+em {
+    color: #c05e51;
+}
+
+strong {
+
+}
+
+span {
+    color: #5a6e5a;
+}

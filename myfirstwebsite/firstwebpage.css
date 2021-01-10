@@ -1,0 +1,229 @@
+/*fonts--------------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'blackjack-webfont';
+    src: url('font/blackjack-webfont.eot') format('eot'),
+        url('font/blackjack-webfont.svg') format('svg'),
+        url('font/blackjack-webfont.ttf') format('ttf'),
+        url('font/blackjack-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'roboto_condensedlight';
+    src: url('font/RobotoCondensed-Light-webfont.eot');
+    src: url('font/RobotoCondensed-Light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('font/RobotoCondensed-Light-webfont.woff2') format('woff2'),
+        url('font/RobotoCondensed-Light-webfont.woff') format('woff'),
+        url('font/RobotoCondensed-Light-webfont.ttf') format('truetype'),
+        url('font/RobotoCondensed-Light-webfont.svg#roboto_condensedlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: url("img/pink-flower.png") fixed top;
+    background-color: rgb(56, 122, 102);
+    font-family: "roboto_condensedlight", verdana, sans-serif;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    background-color: rgb(255, 255, 255);
+    /* Pour les navigateurs anciens mettre en rgb*/
+    background-color: rgba(255, 255, 255, 0.20);
+    /* Pour les navigateurs plus récents on peut le rgba*/
+    border-radius: 10px 5px 10px 5px;
+    /*top-left, top-right, bottom right, bottom-left*/
+    padding: 10px;
+}
+
+/*Top--------------------------------------------------------------------------------*/
+header {
+    display: flex;
+    padding: 10px;
+}
+
+#logo {
+    width: 120px;
+    height: auto;
+    float: left;
+}
+
+h1 {
+    color: white;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+h1:hover {
+    background-color: pink;
+}
+
+nav ul {
+    list-style: none;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav li {
+    background-color: rgb(56, 122, 102);
+    background-color: rgba(56, 122, 102, 0.7);
+    margin-left: 50px;
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: pink;
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: white;
+}
+
+nav a:focus {
+    color: pink;
+}
+
+nav a:visited {
+    color: white;
+}
+
+/*middle--------------------------------------------------------------------------------*/
+h2 {
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.50);
+    font-family: "blackjack-webfont", Verdana, sans-serif;
+    /*j'appelle la nouvelle police définie plus haut*/
+    font-style: italic;
+    /*mettre en italique*/
+    border-left: 2px pink dashed;
+    border-right: 3px green solid;
+    border-top: 4px blue dotted;
+    border-bottom: 5px red double;
+    /*test une bordure diff de chaque côté*/
+}
+
+h3 {
+    font-family: "blackjack-webfont", Verdana, sans-serif;
+    /*j'appelle la nouvelle police définie plus haut*/
+    font-weight: bold;
+    /*mettre en gras*/
+    text-align: right;
+}
+
+section {
+    display: flex;
+    text-align: justify;
+    justify-content: space-around;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+aside img {
+    width: 50px;
+    height: auto;
+}
+
+article {
+    background-color: pink;
+    border: double white;
+    padding: 3px;
+}
+
+/*Botom--------------------------------------------------------------------------------*/
+footer {
+    font-family: "blackjack-webfont", Verdana, sans-serif;
+    font-style: italic;
+    color: rgb(56, 122, 102);
+    text-shadow: 2px 2px 2px grey;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*details-------------------------------------------------------------------------------*/
+em, strong {
+    color: rgb(56, 122, 102);
+    text-shadow: 2px 2px 4px grey;
+}
+
+mark {
+    background-color: rgb(56, 122, 102);
+    background-color: rgba(56, 122, 102, 0.7);
+    color: pink;
+    font-style: italic;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(56, 122, 102);
+}
+
+a:hover {
+    color: pink;
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(56, 122, 102);
+}
+
+a:focus {
+    color: pink;
+}
+
+a:visited {
+    color: rgb(56, 122, 102);
+}
+
+.introduction {
+    background-color: rgb(56, 122, 102);
+    background-color: rgba(56, 122, 102, 0.7);
+    color: pink;
+    font-style: italic;
+    border-left: 2px solid pink;
+    border-right: 2px dotted pink;
+    box-shadow: 6px 6px 0px rgb(56, 122, 102) inset;
+    /*ombre de 6 pixels, à l'intérieur, sans adoucissement*/
+}
+
+.littleplace {
+    font-weight: bold;
+}
+
+.souligne {
+    text-decoration: underline;
+}
+
+.barre {
+    text-decoration: line-through;
+}
+
+.imageflottante {
+    float: left;
+}
+
+.dessous {
+    clear: both;
+}
+
+.poopy {
+    text-align: center;
+}
+
+.poopyzip {
+    text-align: right;
+}
