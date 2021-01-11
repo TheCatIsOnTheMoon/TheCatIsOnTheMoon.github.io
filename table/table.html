@@ -27,11 +27,20 @@
                     <br />
                     Le résultat de ce pari est caché dans la page.
                     <br />
-                    <p>
+                <p>
                     Un peu de musique pour vos oreilles:
                     <br />
+
+                    <!--controls  : pour ajouter les boutons « Lecture », « Pause » et la barre de défilement.
+                    width  : pour modifier la largeur de l'outil de lecture audio ;
+                    loop  :   la musique sera jouée en boucle ;
+                    autoplay  : la musique sera jouée dès le chargement de la page
+                    preload  : indique si la musique peut être préchargée dès le chargement de la page ou non. Cet attribut peut prendre les valeurs :
+                    auto  (par défaut) : le navigateur décide s'il doit précharger toute la musique, uniquement les métadonnées ou rien du tout,
+                    metadata  : charge uniquement les métadonnées (durée, etc.),
+                    none  : pas de préchargement. Utile-->
                     <audio src="testmusic.ogg" controls></audio>
-                    </p>
+                </p>
                 </p>
             </section>
 
@@ -118,8 +127,24 @@
 
         </article>
 
+        <p class="reponse">Cléopatra est décédée après 1 mois et demi de vie en ma compagnie. Paix à son âme.</p>
+
+        <article>
+            <!--poster  : image à la place de la vidéo non lancée. Par défaut,il prend la première image de la vidéo mais il s'agit souvent d'une image noire ou d'une image peu représentative de la vidéo.
+        controls  : pour ajouter les boutons « Lecture », « Pause » et la barre de défilement.
+        loop  : la vidéo sera jouée en boucle.
+        autoplay  : la vidéo sera jouée dès le chargement de la page.
+        preload  : indique si la vidéo peut être préchargée dès le chargement de la page ou non. Cet attribut peut prendre les valeurs :
+        auto  (par défaut) : le navigateur décide s'il doit précharger toute la vidéo, uniquement les métadonnées ou rien du tout ;
+        metadata  : charge uniquement les métadonnées (durée, dimensions, etc.) ;
+        none  : pas de préchargement. Utile.
+        -->
+            <p>Vison</p>
+            <video src="testvideo.mp4" controls></video>
+            <p>Divine</p>
+        </article>
         <footer>
-            <p>Cléopatra est décédée après 1 mois et demi de vie en ma compagnie. Paix à son âme.</p>
+            <p>J'espère que tout fonctionne.</p>
         </footer>
     </div>
 </body>

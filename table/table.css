@@ -27,6 +27,8 @@ header {
 }
 
 article {
+    font-style: italic;
+    color:  #f3f0e9;
     display: flex;
 }
 
@@ -87,6 +89,19 @@ footer {
     height: 20px;
 }
 
+.reponse {
+    background-color: #e7dfcf;
+    color:  #e7dfcf;
+    font-style: italic;
+    font-size: small;
+    height: 20px;
+}
+
 audio {
     margin: 10px 10px 10px -25px;
+}
+
+video {
+    margin: auto;
+    width: 200px;
 }
