@@ -137,8 +137,8 @@ footer {
 
 
 
-/*modif pour les petites résolutions - inf à 1280px - ici 900px*/
-@media screen and (max-width: 900px)
+/*modif pour les petites résolutions */
+@media screen and (max-width: 800px)
 {
     h1 {
         margin: auto;
