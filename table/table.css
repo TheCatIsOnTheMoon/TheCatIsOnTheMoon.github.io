@@ -86,3 +86,7 @@ footer {
     font-size: small;
     height: 20px;
 }
+
+audio {
+    margin: 10px 10px 10px -25px;
+}
