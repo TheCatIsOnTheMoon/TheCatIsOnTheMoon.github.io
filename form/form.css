@@ -14,10 +14,7 @@ body {
 
 header, footer {
     padding: 30px;
-}
-
-h1 {
-    font-style: capitalise;
+    font-size: small;
 }
 
 .att {
@@ -31,6 +28,11 @@ fieldset {
     border: double #efb758;
     padding: 20px;
     margin: 10px;
+}
+
+label {
+    color: #17395c;
+    font-size: small;
 }
 
 legend {
