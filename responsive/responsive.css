@@ -130,7 +130,7 @@ footer {
     margin: 20px;
 }
 
-/*modif pour les petites résolutions
+/*modif pour les petites résolutions */
 @media screen and (max-width: 800px)
 {
     h1 {
@@ -169,8 +169,13 @@ footer {
     footer p{
         text-align: center;
     }
-}*/
-@media screen and (max-width: 800px) {
+}
+
+
+
+
+
+/*@media screen and (max-width: 800px) {
     body {
         background-color: #e9e0d7;
         color: #aa1418;
@@ -300,3 +305,4 @@ footer {
         text-align: center;
     }
 }
+*/
