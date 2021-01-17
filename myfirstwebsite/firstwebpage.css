@@ -30,9 +30,7 @@ body {
 
 p {
     background-color: rgb(255, 255, 255);
-    /* Pour les navigateurs anciens mettre en rgb*/
     background-color: rgba(255, 255, 255, 0.20);
-    /* Pour les navigateurs plus récents on peut le rgba*/
     border-radius: 10px 5px 10px 5px;
     /*top-left, top-right, bottom right, bottom-left*/
     padding: 10px;
@@ -102,21 +100,16 @@ h2 {
     background-color: rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0.50);
     font-family: "blackjack-webfont", Verdana, sans-serif;
-    /*j'appelle la nouvelle police définie plus haut*/
     font-style: italic;
-    /*mettre en italique*/
     border-left: 2px pink dashed;
     border-right: 3px green solid;
     border-top: 4px blue dotted;
     border-bottom: 5px red double;
-    /*test une bordure diff de chaque côté*/
 }
 
 h3 {
     font-family: "blackjack-webfont", Verdana, sans-serif;
-    /*j'appelle la nouvelle police définie plus haut*/
     font-weight: bold;
-    /*mettre en gras*/
     text-align: right;
 }
 
@@ -204,20 +197,12 @@ a:visited {
     font-weight: bold;
 }
 
-.souligne {
+.underline {
     text-decoration: underline;
 }
 
 .barre {
     text-decoration: line-through;
-}
-
-.imageflottante {
-    float: left;
-}
-
-.dessous {
-    clear: both;
 }
 
 .poopy {
