@@ -167,22 +167,190 @@ for (let passenger of passengers) {
     console.log('Embarquement du passager ' + passenger.name + ' avec le ticket numéro ' + passenger.ticketNumber);
 }
 
-// exo ======================================================================
+// exo function ======================================================================
 
 // parametres et valeurs de retour ======================
 
 const calculateAverageRating = (ratings) => {
 
-  if(ratings.length === 0) {
-    return 0;
-  }
+    if (ratings.length === 0) {
+        return 0;
+    }
 
-  let sum = 0;
-  for (let rating of ratings) {
-    sum += rating;
-  }
+    let sum = 0;
+    for (let rating of ratings) {
+        sum += rating;
+    }
 
-  return sum / ratings.length;
+    return sum / ratings.length;
 }
 
-// ======================
+// exemple frecodecamp : Call the processArg function with an argument of 7 and assign its return value to the variable processed.======================
+
+var processed = 0;
+
+function processArg(num) {
+    return (num + 3) / 5;
+}
+
+processed = processArg(7);
+
+//exemple : méthodes d'intances================================================
+
+class BankAccount {
+    constructor(owner, balance) {
+        this.owner = owner;
+        this.balance = balance;
+    }
+
+    showBalance() {
+        console.log("Solde: " + this.balance + " EUR");
+    }
+
+    deposit(amount) {
+        console.log("Dépôt de " + amount + " EUR");
+        this.balance += amount;
+        this.showBalance();
+    }
+
+    withdraw(amount) {
+        if (amount > this.balance) {
+            console.log("Retrait refusé !");
+        } else {
+            console.log("Retrait de " + amount + " EUR");
+            this.balance -= amount;
+            this.showBalance();
+        }
+    }
+}
+
+//==================================================
+
+// exo ======================
+
+class Show {
+    constructor(title, numberOfSeasons) {
+        this.title = title;
+        this.numberOfSeasons = numberOfSeasons;
+        this.ratings = [];
+        this.averageRating = 0;
+    }
+
+    addRating(rating) {
+        this.ratings.push(rating);
+        let sum = 0;
+        for (let rating of this.ratings) {
+            sum += rating;
+        }
+
+        this.averageRating = sum / this.ratings.length;
+    }
+}
+
+// exemple de refactorisation ======================
+
+// code original :
+const tauTitleText = tau.title;
+const tauSeasonsText = tau.numberOfSeasons + ' seasons';
+const tauEpisodesText = tau.episodesPerSeason + ' episodes per season';
+const tauComponent = {
+    titleText: tauTitleText,
+    seasonsText: tauSeasonsText,
+    episodesText: tauEpisodesText
+};
+
+const meldrumTitleText = meldrum.title;
+const meldrumSeasonsText = meldrum.numberOfSeasons + ' seasons';
+const meldrumEpisodesText = meldrum.episodesPerSeason + ' episodes per season';
+const meldrumComponent = {
+    titleText: meldrumTitleText,
+    seasonsText: meldrumSeasonsText,
+    episodesText: meldrumEpisodesText
+};
+
+const claraTitleText = clara.title;
+const claraSeasonsText = clara.numberOfSeasons + ' seasons';
+const claraEpisodesText = clara.episodesPerSeason + ' episodes per season';
+const claraComponent = {
+    titleText: claraTitleText,
+    seasonsText: claraSeasonsText,
+    episodesText: claraEpisodesText
+};
+
+const showComponents = [tauComponent, meldrumComponent, claraComponent];
+
+// code refactorisé :======================
+
+const generateComponent = (show) => {
+    const titleText = show.title;
+    const seasonsText = show.numberOfSeasons + ' seasons';
+    const episodesText = show.episodesPerSeason + ' episodes per season';
+    return {
+        titleText,
+        seasonsText,
+        episodesText
+    };
+}
+
+const tauComponent = generateComponent(tau);
+const meldrumComponent = generateComponent(meldrum);
+const claraComponent = generateComponent(clara);
+
+const showComponents = [tauComponent, meldrumComponent, claraComponent];
+
+// autre exemple de refactorisation ======================
+
+// avant
+
+const printStringStats = (stringToTest) => {
+  const wordArray = stringToTest.split(" ");
+  const wordCount = wordArray.length;
+  let letterCount = 0;
+  for (let word of wordArray) {
+    word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+    letterCount += word.length;
+  }
+  const averageWordLength = parseFloat((letterCount / wordCount).toFixed(2));
+  const stringStats = {
+    wordCount: wordCount,
+    letterCount: letterCount,
+    averageWordLength: averageWordLength
+  };
+  console.log(stringStats);
+}
+
+// apres et avec des commentaires =============================================
+
+const getWordCount = (stringToTest) => {
+  const wordArray = stringToTest.split(' ');
+  return wordArray.length;
+}
+
+const getLetterCount = (stringToTest) => {
+  const wordArray = stringToTest.split(' ');
+  let totalLetters = 0;
+  for (let word of wordArray) {
+    // retire la ponctuation pour ne compter que les lettres
+    word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+    totalLetters += word.length;
+  }
+  return totalLetters;
+}
+
+/*
+** renvoie la longueur moyenne des mots
+** arrondie à deux chiffres après la virgule
+*/
+const getAverageWordLength = (stringToTest) => {
+  return parseFloat((getLetterCount(stringToTest) / getWordCount(stringToTest)).toFixed(2));
+}
+
+const printStringStats = (stringToTest) => {
+  console.log({
+    wordCount: getWordCount(stringToTest),
+    letterCount: getLetterCount(stringToTest),
+    averageWordLength: getAverageWordLength(stringToTest)
+  })
+}
+
+// ===========================================================================
