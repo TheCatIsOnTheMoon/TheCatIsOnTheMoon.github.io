@@ -303,54 +303,75 @@ const showComponents = [tauComponent, meldrumComponent, claraComponent];
 // avant
 
 const printStringStats = (stringToTest) => {
-  const wordArray = stringToTest.split(" ");
-  const wordCount = wordArray.length;
-  let letterCount = 0;
-  for (let word of wordArray) {
-    word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
-    letterCount += word.length;
-  }
-  const averageWordLength = parseFloat((letterCount / wordCount).toFixed(2));
-  const stringStats = {
-    wordCount: wordCount,
-    letterCount: letterCount,
-    averageWordLength: averageWordLength
-  };
-  console.log(stringStats);
+    const wordArray = stringToTest.split(" ");
+    const wordCount = wordArray.length;
+    let letterCount = 0;
+    for (let word of wordArray) {
+        word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+        letterCount += word.length;
+    }
+    const averageWordLength = parseFloat((letterCount / wordCount).toFixed(2));
+    const stringStats = {
+        wordCount: wordCount,
+        letterCount: letterCount,
+        averageWordLength: averageWordLength
+    };
+    console.log(stringStats);
 }
 
 // apres et avec des commentaires =============================================
 
 const getWordCount = (stringToTest) => {
-  const wordArray = stringToTest.split(' ');
-  return wordArray.length;
+    const wordArray = stringToTest.split(' ');
+    return wordArray.length;
 }
 
 const getLetterCount = (stringToTest) => {
-  const wordArray = stringToTest.split(' ');
-  let totalLetters = 0;
-  for (let word of wordArray) {
-    // retire la ponctuation pour ne compter que les lettres
-    word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
-    totalLetters += word.length;
-  }
-  return totalLetters;
+    const wordArray = stringToTest.split(' ');
+    let totalLetters = 0;
+    for (let word of wordArray) {
+        // retire la ponctuation pour ne compter que les lettres
+        word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+        totalLetters += word.length;
+    }
+    return totalLetters;
 }
 
 /*
-** renvoie la longueur moyenne des mots
-** arrondie à deux chiffres après la virgule
-*/
+ ** renvoie la longueur moyenne des mots
+ ** arrondie à deux chiffres après la virgule
+ */
 const getAverageWordLength = (stringToTest) => {
-  return parseFloat((getLetterCount(stringToTest) / getWordCount(stringToTest)).toFixed(2));
+    return parseFloat((getLetterCount(stringToTest) / getWordCount(stringToTest)).toFixed(2));
 }
 
 const printStringStats = (stringToTest) => {
-  console.log({
-    wordCount: getWordCount(stringToTest),
-    letterCount: getLetterCount(stringToTest),
-    averageWordLength: getAverageWordLength(stringToTest)
-  })
+    console.log({
+        wordCount: getWordCount(stringToTest),
+        letterCount: getLetterCount(stringToTest),
+        averageWordLength: getAverageWordLength(stringToTest)
+    })
 }
 
-// ===========================================================================
+// exemple binary search ==================================================
+
+const binarySearch = (array, thingToFind, start, end) => {
+
+    if (start > end) {
+        return false;
+    }
+
+    let mid = Math.floor((start + end) / 2);
+
+    if (array[mid] === thingToFind) {
+        return true;
+    }
+
+    if (thingToFind < array[mid]) {
+        return binarySearch(array, thingToFind, start, mid - 1);
+    } else {
+        return binarySearch(array, thingToFind, mid + 1, end);
+    }
+}
+
+// ==========================================================================
