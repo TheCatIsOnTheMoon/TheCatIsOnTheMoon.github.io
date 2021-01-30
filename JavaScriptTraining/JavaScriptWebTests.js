@@ -61,4 +61,44 @@ child_a.addEventListener('click', function(event) {
 
 main();
 
-// =====================================================================
+// exercice chap 5 =====================================================================
+
+// name OK==============================
+const name = document.getElementById('name');
+const resName = document.getElementById('res-name');
+
+name.addEventListener('input', function(event) {
+    resName.innerHTML = event.target.value;
+});
+
+// gender / JE COMPRENDS VRAIMENT PAS CETTE PARTIE =========================
+// voir note plus bas
+
+let gender = document.getElementById('gender');
+let resGender = document.getElementById('res-gender');
+
+function updateGender(event){
+  resGender.innerHTML = event.target.value
+}
+
+gender.addEventListener('change', updateGender)
+
+// mouse OK ===========================
+let mouseX = document.getElementById('mouse-x');
+let mouseY = document.getElementById('mouse-y');
+
+document.addEventListener('mousemove', function(event) {
+    const x = event.offsetX; // Coordonnée X de la souris dans l'élément
+    const y = event.offsetY; // Coordonnée Y de la souris dans l'élément
+    mouseX.innerHTML = x;
+    mouseY.innerHTML = y;
+});
+
+// écouter le changement de choix d'un élément de type  select
+//et afficher sa valeur dans un élément stocké dans la variable  result :
+
+mySelect.addEventListener('change', function(e) {
+    result.innerHTML = e.target.value;
+});
+
+// =====================================================
