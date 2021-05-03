@@ -4,7 +4,7 @@
     --color_secondary: #48665E;
     --color_tertiary: #971C3C;
     --color_background_light: #EEEBE7;
-    --color_background_dark: #4F4F4F;
+    --color_background_dark: black;
     --color_background_dark--opacity50: hsla(0, 0%, 30%, 0.50);
 }
 
@@ -45,6 +45,7 @@ h1 strong {
 main {
     background-color: var(--color_background_light);
     padding: 0 1rem;
+    height: auto;
 }
 
 h3 {
@@ -55,7 +56,15 @@ h3 {
 }
 
 /* Section 1 - about */
-.about {}
+.about a {
+  color: var(--color_background_dark);
+  font-style: italic;
+  font-weight: bold;
+}
+
+.about a:hover {
+  color: var(--color_tertiary);
+}
 
 /* Section 2 - projects */
 .show {
@@ -71,7 +80,8 @@ h3 {
     border: .1rem solid var(--color_background_dark);
     height: 15rem;
     width: 15rem;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     position: relative;
     margin: 1rem 0;
 }
@@ -104,7 +114,8 @@ h3 {
 .project__card img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .project__card figcaption {
@@ -152,6 +163,6 @@ h3 {
 
 /* FOOTER */
 footer {
-    height: 10rem;
+    height: 30rem;
     background-color: var(--color_background_dark);
 }
