@@ -57,13 +57,13 @@ h3 {
 
 /* Section 1 - about */
 .about a {
-  color: var(--color_background_dark);
-  font-style: italic;
-  font-weight: bold;
+    color: var(--color_background_dark);
+    font-style: italic;
+    font-weight: bold;
 }
 
 .about a:hover {
-  color: var(--color_tertiary);
+    color: var(--color_tertiary);
 }
 
 /* Section 2 - projects */
@@ -81,12 +81,12 @@ h3 {
     height: 15rem;
     width: 15rem;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     position: relative;
     margin: 1rem 0;
 }
 
-.project__card + .project__card {
+.project__card+.project__card {
     margin-left: 1rem;
 }
 
@@ -115,7 +115,7 @@ h3 {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 }
 
 .project__card figcaption {
@@ -141,8 +141,8 @@ h3 {
     border: .1rem solid var(--color_primary);
 }
 
-#project2:hover > h4,
-#project2:hover > figcaption {
+#project2:hover>h4,
+#project2:hover>figcaption {
     letter-spacing: 0.1rem;
     background-color: var(--color_primary);
     color: var(--color_background_dark);
@@ -153,8 +153,8 @@ h3 {
     border: .1rem solid var(--color_tertiary);
 }
 
-#project3:hover > h4,
-#project3:hover > figcaption {
+#project3:hover>h4,
+#project3:hover>figcaption {
     letter-spacing: 0.1rem;
     background-color: var(--color_tertiary);
     transition: all 0.5s ease-out;

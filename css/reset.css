@@ -1,10 +1,10 @@
-	/*Standard CSS Reset
+/*Standard CSS Reset
 
     This is used to account for differences in browsers.
     Without a reset stylesheet there could be differences
     between browsers when loading your html website.
 
-    Source: meyerweb.com */
+Source: meyerweb.com */
 
 a,
 abbr,
@@ -94,6 +94,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 
 article,
