@@ -1,168 +1,168 @@
 /* variables */
 :root {
-    --color_primary: #FBBD5C;
-    --color_secondary: #48665E;
-    --color_tertiary: #971C3C;
-    --color_background_light: #EEEBE7;
-    --color_background_dark: black;
-    --color_background_dark--opacity50: hsla(0, 0%, 30%, 0.50);
+  --color_primary: #FBBD5C;
+  --color_secondary: #48665E;
+  --color_tertiary: #971C3C;
+  --color_background_light: #EEEBE7;
+  --color_background_dark: black;
+  --color_background_dark--opacity50: hsla(0, 0%, 30%, 0.50);
 }
 
 /* BASE */
 * {
-    box-sizing: border-box !important;
+  box-sizing: border-box !important;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 0;
 }
 
 /* HEADER */
 header h1 {
-    height: 10rem;
-    background-color: var(--color_background_dark);
-    color: var(--color_background_light);
-    font-family: 'Oswald';
-    font-weight: 300;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    padding: 1rem;
+  height: 10rem;
+  background-color: var(--color_background_dark);
+  color: var(--color_background_light);
+  font-family: 'Oswald';
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 1rem;
 }
 
 h1 strong {
-    font-weight: 900;
-    letter-spacing: 0.4rem;
+  font-weight: 900;
+  letter-spacing: 0.4rem;
 }
 
 /* MAIN */
 main {
-    background-color: var(--color_background_light);
-    padding: 0 1rem;
-    height: auto;
+  background-color: var(--color_background_light);
+  padding: 0 1rem;
+  height: auto;
 }
 
 h3 {
-    font-family: 'Oswald';
-    font-weight: 900;
-    text-transform: uppercase;
-    padding: 1rem 0;
+  font-family: 'Oswald';
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 1rem 0;
 }
 
 /* Section 1 - about */
 .about a {
-    color: var(--color_background_dark);
-    font-style: italic;
-    font-weight: bold;
+  color: var(--color_background_dark);
+  font-style: italic;
+  font-weight: bold;
 }
 
 .about a:hover {
-    color: var(--color_tertiary);
+  color: var(--color_tertiary);
 }
 
 /* Section 2 - projects */
 .show {
-    padding: 1rem 0;
+  padding: 1rem 0;
 }
 
 .project {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .project__card {
-    border: .1rem solid var(--color_background_dark);
-    height: 15rem;
-    width: 15rem;
-    -o-object-fit: cover;
-    object-fit: cover;
-    position: relative;
-    margin: 1rem 0;
+  border: .1rem solid var(--color_background_dark);
+  height: 15rem;
+  width: 15rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  margin: 1rem 0;
 }
 
 .project__card+.project__card {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .project__card h4,
 .project__card img,
 .project__card figcaption {
-    position: absolute;
+  position: absolute;
 }
 
 .project__card h4 {
-    font-family: 'Oswald';
-    font-weight: 900;
-    text-transform: uppercase;
-    color: var(--color_background_light);
+  font-family: 'Oswald';
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color_background_light);
 
-    padding: 1rem 1rem;
+  padding: 1rem 1rem;
 
-    width: 100%;
-    background-color: var(--color_background_dark--opacity50);
-    text-align: center;
+  width: 100%;
+  background-color: var(--color_background_dark--opacity50);
+  text-align: center;
 
-    z-index: 1;
+  z-index: 1;
 }
 
 .project__card img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .project__card figcaption {
-    width: 100%;
-    background-color: var(--color_background_dark--opacity50);
-    bottom: 0;
-    text-align: center;
+  width: 100%;
+  background-color: var(--color_background_dark--opacity50);
+  bottom: 0;
+  text-align: center;
 }
 
 .project__card svg {
-    width: 1.5rem;
-    margin: .5rem 1rem;
-    cursor: pointer;
-    transition: all 0.5s ease-out;
+  width: 1.5rem;
+  margin: .5rem 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
 }
 
 .project__card svg:hover {
-    transform: scale3d(1.2, 1.2, 1.2);
-    transition: all 0.5s ease-out;
+  transform: scale3d(1.2, 1.2, 1.2);
+  transition: all 0.5s ease-out;
 }
 
 #project2:hover {
-    border: .1rem solid var(--color_primary);
+  border: .1rem solid var(--color_primary);
 }
 
 #project2:hover>h4,
 #project2:hover>figcaption {
-    letter-spacing: 0.1rem;
-    background-color: var(--color_primary);
-    color: var(--color_background_dark);
-    transition: all 0.5s ease-out;
+  letter-spacing: 0.1rem;
+  background-color: var(--color_primary);
+  color: var(--color_background_dark);
+  transition: all 0.5s ease-out;
 }
 
 #project3:hover {
-    border: .1rem solid var(--color_tertiary);
+  border: .1rem solid var(--color_tertiary);
 }
 
 #project3:hover>h4,
 #project3:hover>figcaption {
-    letter-spacing: 0.1rem;
-    background-color: var(--color_tertiary);
-    transition: all 0.5s ease-out;
+  letter-spacing: 0.1rem;
+  background-color: var(--color_tertiary);
+  transition: all 0.5s ease-out;
 }
 
 
 /* FOOTER */
 footer {
-    height: 30rem;
-    background-color: var(--color_background_dark);
+  height: 30rem;
+  background-color: var(--color_background_dark);
 }
