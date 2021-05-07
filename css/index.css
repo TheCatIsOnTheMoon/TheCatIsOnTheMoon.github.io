@@ -3,9 +3,13 @@
   --color_primary: #FBBD5C;
   --color_secondary: #48665E;
   --color_tertiary: #971C3C;
-  --color_background_light: #EEEBE7;
-  --color_background_dark: black;
-  --color_background_dark--opacity50: hsla(0, 0%, 30%, 0.50);
+
+  --color_font--light: #EEEBE7;
+  --color_font--dark:#26242F;
+  
+  --color_background--light: #EEEBE7;
+  --color_background--dark: #26242F;
+  --color_background--dark--opacity50: #4d4d4d80;
 }
 
 /* BASE */
@@ -23,17 +27,38 @@ body {
   margin: 0;
 }
 
+/* General Margins & Paddings */
+header h1,
+.about,
+.show h3,
+.project {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.about,
+.show {
+  padding-top: 5%;
+  margin-top: 5%;
+}
+
+.about h3 {
+  padding-bottom: 5%;
+  }
+
 /* HEADER */
 header h1 {
-  height: 10rem;
-  background-color: var(--color_background_dark);
-  color: var(--color_background_light);
+  height: 10%;
+  color: var(--color_font--light);
   font-family: 'Oswald';
   font-weight: 300;
   font-size: 2rem;
+  text-shadow: 1px 1px 2px var(--color_font--dark);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  padding: 1rem;
+
+  position: absolute;
+  top: 5%;
 }
 
 h1 strong {
@@ -43,21 +68,18 @@ h1 strong {
 
 /* MAIN */
 main {
-  background-color: var(--color_background_light);
-  padding: 0 1rem;
-  height: auto;
 }
 
 h3 {
   font-family: 'Oswald';
   font-weight: 900;
   text-transform: uppercase;
-  padding: 1rem 0;
 }
 
 /* Section 1 - about */
+
 .about a {
-  color: var(--color_background_dark);
+  color: var(--color_font--dark);
   font-style: italic;
   font-weight: bold;
 }
@@ -68,7 +90,8 @@ h3 {
 
 /* Section 2 - projects */
 .show {
-  padding: 1rem 0;
+  background-color: var(--color_background--dark);
+  color: var(--color_font--light);
 }
 
 .project {
@@ -77,17 +100,17 @@ h3 {
 }
 
 .project__card {
-  border: .1rem solid var(--color_background_dark);
+  border: .1rem solid var(--color_background--dark);
   height: 15rem;
-  width: 15rem;
+  width: 30%;
   -o-object-fit: cover;
   object-fit: cover;
   position: relative;
-  margin: 1rem 0;
+  margin: 5% 0;
 }
 
 .project__card+.project__card {
-  margin-left: 1rem;
+  margin-left: 5%;
 }
 
 .project__card h4,
@@ -100,12 +123,12 @@ h3 {
   font-family: 'Oswald';
   font-weight: 900;
   text-transform: uppercase;
-  color: var(--color_background_light);
+  color: var(--color_font--light);
 
-  padding: 1rem 1rem;
+  padding: 5%;
 
   width: 100%;
-  background-color: var(--color_background_dark--opacity50);
+  background-color: var(--color_background--dark--opacity50);
   text-align: center;
 
   z-index: 1;
@@ -120,7 +143,7 @@ h3 {
 
 .project__card figcaption {
   width: 100%;
-  background-color: var(--color_background_dark--opacity50);
+  background-color: var(--color_background--dark--opacity50);
   bottom: 0;
   text-align: center;
 }
@@ -145,7 +168,7 @@ h3 {
 #project2:hover>figcaption {
   letter-spacing: 0.1rem;
   background-color: var(--color_primary);
-  color: var(--color_background_dark);
+  color: var(--color_background--dark);
   transition: all 0.5s ease-out;
 }
 
@@ -163,6 +186,5 @@ h3 {
 
 /* FOOTER */
 footer {
-  height: 30rem;
-  background-color: var(--color_background_dark);
+  
 }
