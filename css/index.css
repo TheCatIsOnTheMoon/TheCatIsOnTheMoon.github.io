@@ -31,20 +31,11 @@ body {
 header h1,
 .about,
 .show h3,
-.project {
+.project,
+footer ul {
   padding-left: 5%;
   padding-right: 5%;
 }
-
-.about,
-.show {
-  padding-top: 5%;
-  margin-top: 5%;
-}
-
-.about h3 {
-  padding-bottom: 5%;
-  }
 
 /* HEADER */
 header h1 {
@@ -58,7 +49,7 @@ header h1 {
   letter-spacing: 0.2rem;
 
   position: absolute;
-  top: 5%;
+  top: 1rem;
 }
 
 h1 strong {
@@ -77,36 +68,46 @@ h3 {
 }
 
 /* Section 1 - about */
+.about {
+  padding-bottom: 1rem;
+}
+
+.about h3 {
+  padding-bottom: 1rem;
+  }
 
 .about a {
   color: var(--color_font--dark);
-  font-style: italic;
   font-weight: bold;
 }
 
 .about a:hover {
-  color: var(--color_tertiary);
+  color: var(--color_font--light);
+  text-shadow: 1px 1px 2px var(--color_font--dark);
 }
 
 /* Section 2 - projects */
 .show {
   background-color: var(--color_background--dark);
   color: var(--color_font--light);
+
+  padding-top: 1rem;
 }
 
 .project {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .project__card {
   border: .1rem solid var(--color_background--dark);
   height: 15rem;
-  width: 30%;
+  width: 25%;
   -o-object-fit: cover;
   object-fit: cover;
   position: relative;
-  margin: 5% 0;
+  margin: 1rem 0;
 }
 
 .project__card+.project__card {
@@ -168,7 +169,7 @@ h3 {
 #project2:hover>figcaption {
   letter-spacing: 0.1rem;
   background-color: var(--color_primary);
-  color: var(--color_background--dark);
+  text-shadow: 1px 1px 2px var(--color_font--dark);
   transition: all 0.5s ease-out;
 }
 
@@ -180,11 +181,19 @@ h3 {
 #project3:hover>figcaption {
   letter-spacing: 0.1rem;
   background-color: var(--color_tertiary);
+  text-shadow: 1px 1px 2px var(--color_font--dark);
   transition: all 0.5s ease-out;
 }
 
 
 /* FOOTER */
-footer {
-  
+footer ul {
+  text-transform: uppercase;
+  padding-bottom: 5%;
+  font-weight: 900;
+}
+
+footer a:hover {
+  color: var(--color_font--light);
+  text-shadow: 1px 1px 2px var(--color_font--dark);
 }
