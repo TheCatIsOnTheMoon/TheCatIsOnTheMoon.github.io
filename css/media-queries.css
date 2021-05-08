@@ -1,11 +1,10 @@
 @media screen and (max-width: 992px) {
-  
-  .project {
-    justify-content: space-between;
-  }
+	.project {
+		justify-content: space-between;
+	}
 
-  .project__card {
-    height: 13rem;
-    width: 45%;
-  }
+	.project__card {
+		height: 13rem;
+		width: 45%;
+	}
 }
