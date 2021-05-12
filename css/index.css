@@ -58,8 +58,6 @@ h1 strong {
 }
 
 /* MAIN */
-main {
-}
 
 h3 {
   font-family: 'Oswald';
@@ -98,6 +96,7 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .project__card {
@@ -110,9 +109,9 @@ h3 {
   margin: 1rem 0;
 }
 
-.project__card+.project__card {
+/* .project__card+.project__card {
   margin-left: 5%;
-}
+} */
 
 .project__card h4,
 .project__card img,
@@ -174,11 +173,23 @@ h3 {
 }
 
 #project3:hover {
-  border: .1rem solid var(--color_tertiary);
+  border: .1rem solid var(--color_secondary);
 }
 
 #project3:hover>h4,
 #project3:hover>figcaption {
+  letter-spacing: 0.1rem;
+  background-color: var(--color_secondary);
+  text-shadow: 1px 1px 2px var(--color_font--dark);
+  transition: all 0.5s ease-out;
+}
+
+#project4:hover {
+  border: .1rem solid var(--color_tertiary);
+}
+
+#project4:hover>h4,
+#project4:hover>figcaption {
   letter-spacing: 0.1rem;
   background-color: var(--color_tertiary);
   text-shadow: 1px 1px 2px var(--color_font--dark);
