@@ -1,14 +1,15 @@
 /* variables */
 :root {
-  --color_primary: #FBBD5C;
-  --color_secondary: #48665E;
-  --color_tertiary: #971C3C;
+  --color_primary: #fbbd5c;
+  --color_secondary: #48665e;
+  --color_tertiary: #971c3c;
+  --color_quadrary: #494bb9;
 
-  --color_font--light: #EEEBE7;
-  --color_font--dark:#26242F;
-  
-  --color_background--light: #EEEBE7;
-  --color_background--dark: #26242F;
+  --color_font--light: #eeebe7;
+  --color_font--dark: #26242f;
+
+  --color_background--light: #eeebe7;
+  --color_background--dark: #26242f;
   --color_background--dark--opacity50: #4d4d4d80;
 }
 
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   margin: 0;
 }
@@ -41,7 +42,7 @@ footer ul {
 header h1 {
   height: 10%;
   color: var(--color_font--light);
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-weight: 300;
   font-size: 2rem;
   text-shadow: 1px 1px 2px var(--color_font--dark);
@@ -60,7 +61,7 @@ h1 strong {
 /* MAIN */
 
 h3 {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -72,7 +73,7 @@ h3 {
 
 .about h3 {
   padding-bottom: 1rem;
-  }
+}
 
 .about a {
   color: var(--color_font--dark);
@@ -88,8 +89,7 @@ h3 {
 .show {
   background-color: var(--color_background--dark);
   color: var(--color_font--light);
-
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .project {
@@ -97,10 +97,11 @@ h3 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-bottom: 2rem;
 }
 
 .project__card {
-  border: .1rem solid var(--color_background--dark);
+  border: 0.1rem solid var(--color_background--dark);
   height: 15rem;
   width: 25%;
   -o-object-fit: cover;
@@ -109,10 +110,6 @@ h3 {
   margin: 1rem 0;
 }
 
-/* .project__card+.project__card {
-  margin-left: 5%;
-} */
-
 .project__card h4,
 .project__card img,
 .project__card figcaption {
@@ -120,7 +117,7 @@ h3 {
 }
 
 .project__card h4 {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-weight: 900;
   text-transform: uppercase;
   color: var(--color_font--light);
@@ -150,7 +147,7 @@ h3 {
 
 .project__card svg {
   width: 1.5rem;
-  margin: .5rem 1rem;
+  margin: 0.5rem 1rem;
   cursor: pointer;
   transition: all 0.5s ease-out;
 }
@@ -160,12 +157,15 @@ h3 {
   transition: all 0.5s ease-out;
 }
 
+/* hover colors */
+
+/* formation projects */
 #project2:hover {
-  border: .1rem solid var(--color_primary);
+  border: 0.1rem solid var(--color_primary);
 }
 
-#project2:hover>h4,
-#project2:hover>figcaption {
+#project2:hover > h4,
+#project2:hover > figcaption {
   letter-spacing: 0.1rem;
   background-color: var(--color_primary);
   text-shadow: 1px 1px 2px var(--color_font--dark);
@@ -173,11 +173,11 @@ h3 {
 }
 
 #project3:hover {
-  border: .1rem solid var(--color_secondary);
+  border: 0.1rem solid var(--color_secondary);
 }
 
-#project3:hover>h4,
-#project3:hover>figcaption {
+#project3:hover > h4,
+#project3:hover > figcaption {
   letter-spacing: 0.1rem;
   background-color: var(--color_secondary);
   text-shadow: 1px 1px 2px var(--color_font--dark);
@@ -185,17 +185,77 @@ h3 {
 }
 
 #project4:hover {
-  border: .1rem solid var(--color_tertiary);
+  border: 0.1rem solid var(--color_tertiary);
 }
 
-#project4:hover>h4,
-#project4:hover>figcaption {
+#project4:hover > h4,
+#project4:hover > figcaption {
   letter-spacing: 0.1rem;
   background-color: var(--color_tertiary);
   text-shadow: 1px 1px 2px var(--color_font--dark);
   transition: all 0.5s ease-out;
 }
 
+#project6:hover {
+  border: 0.1rem solid var(--color_quadrary);
+}
+
+#project6:hover > h4,
+#project6:hover > figcaption {
+  letter-spacing: 0.1rem;
+  background-color: var(--color_quadrary);
+  text-shadow: 1px 1px 2px var(--color_font--dark);
+  transition: all 0.5s ease-out;
+}
+
+/* perso projects */
+#persoProject1:hover {
+  border: 0.1rem solid var(--color_primary);
+}
+
+#persoProject1:hover > h4,
+#persoProject1:hover > figcaption {
+  letter-spacing: 0.1rem;
+  background-color: var(--color_primary);
+  text-shadow: 1px 1px 2px var(--color_font--dark);
+  transition: all 0.5s ease-out;
+}
+
+#persoProject2:hover {
+  border: 0.1rem solid var(--color_secondary);
+}
+
+#persoProject2:hover > h4,
+#persoProject2:hover > figcaption {
+  letter-spacing: 0.1rem;
+  background-color: var(--color_secondary);
+  text-shadow: 1px 1px 2px var(--color_font--dark);
+  transition: all 0.5s ease-out;
+}
+
+#persoProject3:hover {
+  border: 0.1rem solid var(--color_tertiary);
+}
+
+#persoProject3:hover > h4,
+#persoProject3:hover > figcaption {
+  letter-spacing: 0.1rem;
+  background-color: var(--color_tertiary);
+  text-shadow: 1px 1px 2px var(--color_font--dark);
+  transition: all 0.5s ease-out;
+}
+
+#persoProject4:hover {
+  border: 0.1rem solid var(--color_quadrary);
+}
+
+#persoProject4:hover > h4,
+#persoProject4:hover > figcaption {
+  letter-spacing: 0.1rem;
+  background-color: var(--color_quadrary);
+  text-shadow: 1px 1px 2px var(--color_font--dark);
+  transition: all 0.5s ease-out;
+}
 
 /* FOOTER */
 footer ul {
